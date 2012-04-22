@@ -1,0 +1,59 @@
+[
+  {
+    "pk": 1,
+    "model": "main.hacker",
+    "fields": {
+      "website": "http://www.oscar.com/",
+      "first_name": "Oscar",
+      "last_name": "Mendoza",
+      "paypal": "osca@dff.com",
+      "reputation": 10,
+      "user": "osuka",
+      "password": "oscar",
+      "email": "oscar@hotmail.com"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "main.enterprise",
+    "fields": {
+      "website": "http://www.dido.com/",
+      "email": "ale_gria1000@hotmail.com",
+      "password": "dido",
+      "name": "Dwdw",
+      "user": "dido"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "main.service",
+    "fields": {
+      "status": "PE",
+      "sql_inyection": false,
+      "description": "le pusieron una carita feliz",
+      "SCD": false,
+      "created_at": "2012-04-21T17:09:26.629",
+      "reputation": 10,
+      "enterprise": 1,
+      "RFI": false,
+      "other": "",
+      "name": "hackearon mi pagina"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "main.service",
+    "fields": {
+      "status": "PE",
+      "sql_inyection": true,
+      "description": "no se q sucede",
+      "SCD": false,
+      "created_at": "2012-04-21T17:29:07.750",
+      "reputation": 8,
+      "enterprise": 1,
+      "RFI": true,
+      "other": "",
+      "name": "Han tumbado mi sitio"
+    }
+  }
+]

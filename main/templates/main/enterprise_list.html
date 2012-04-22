@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+<header class="jumbotron subhead" id="overview">
+  <h1>Empresas</h1>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li class="active"><a href="#typography">Publicar un problema</a></li>
+      <li class=""><a href="#code">Nuevo Analista</a></li>
+      <li class=""><a href="#tables">Nueva Empresa</a></li>
+      <li class=""><a href="#forms">Lista de Empresas</a></li>
+    </ul>
+  </div>
+</header>
+<table class='table table-bordered table-striped '>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Website</th>
+        <th>Post</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for object in object_list %}
+    <tr>
+        <td>{{ object.name }}</td>
+        <td>{{ object.email }}</td>
+        <td>{{ object.website }}</td>
+
+        <td><a href="{% url add_service  %}" class="icon-volume-up"></a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

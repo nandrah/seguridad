@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="hero-unit">
+    <h2>{{ service.enterprise }}</h2>
+    <p>{{ service.name }}</p>
+</div>
+<section class="offset1" id="description">
+  <div class="page-header">
+    <h3>Descripción <small></small></h3>
+  </div>
+  <div class="row">
+    <div class="span6 offset1">
+        <div>
+            <p>{{ service.description }}</p>
+        </div>
+    </div>
+</div>
+</section>
+<section class="offset1" id="vulnerabilidades">
+  <div class="page-header">
+    <h3>Vulnerabilidades<small></small></h3>
+  </div>
+  <div class="row">
+    <div class="span6 offset1">
+        <ul>
+        {% if service.sql_inyection %}
+            <li>Inyección SQL</li>
+        {% endif %}
+        {% if service.RFI %}
+            <li>RFI</li>
+        {% endif %}
+        {% if service.SCD %}
+            <li>   SCD</li>
+        {% endif %}
+    </div>
+</div>
+</section>
+<section class="offset1" id="reputation">
+  <div class="page-header">
+    <h3>Reputación requerida<small></small></h3>
+  </div>
+  <div class="row">
+    <div class="span6 offset1">
+        <div>
+            <p>{{ service.reputation }}</p>
+        </div>
+    </div>
+</div>
+</section>
+<section class="offset1" id="propuesta">
+  <div class="page-header">
+    <h3>Haz tu propuesta<small></small></h3>
+  </div>
+  <div class="row">
+    <div class="span6 offset1">
+        <div>
+        <a class="btn btn-primary">Hacer propuesta »</a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="offset1" id="propuestas">
+  <div class="page-header">
+    <h3>Propuestas de hackers<small></small></h3>
+  </div>
+<table class='table table-bordered table-striped '>
+<thead>
+  <tr>
+  <th>Analista</th>
+  <th>Propuesta</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Oscar Mendoza</td>
+    <td>$1,000</td>
+  </tr>
+  <tr>
+    <td>Alejandra Victoria</td>
+    <td>$9,000</td>
+  </tr>
+  <tr>
+    <td>Miguel Rangel</td>
+    <td>$1,200</td>
+  </tr>
+  <tr>
+    <td>David Nuñez</td>
+    <td>$800</td>
+  </tr>
+</tbody>
+</table>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block javascript %}
+<script type="text/javascript">
+function login(){
+ window.location="hackers/";
+
+}
+</script>
+{% endblock %}
+{% block body %}
+<div class="page-header">
+    <h1>Login<small></small></h1>
+</div>
+<form class="offset1" action="" method="post"><div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="409d6bb8b087006aa2bebd1d7e510b60"></div>
+    <p><label for="id_nombre_usuario">Nombre usuario:</label> <input id="id_nombre_usuario" type="text" name="nombre_usuario" maxlength="100"></p>
+<p><label for="id_password">Contraseña:</label> <input type="password" name="password" id="id_password"></p>
+    <input type="button" value="Submit" onClick="login();">
+</form>
+{% endblock %}
